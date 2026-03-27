@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# DropSphere
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+DropSphere is a neon-themed mobile game built with Expo + React Native where the player guides a falling sphere through staircase-style levels.
 
-## Get started
+## Features
 
-1. Install dependencies
+- 50 progressive levels split by difficulty:
+  - Easy: 1-10
+  - Medium: 11-20
+  - Hard: 21-30
+  - Very Hard: 31-40
+  - Extreme: 41-50
+- Physics-like ball movement with swipe controls
+- Win/Lose flow with level progression and unlock system
+- Auto-saved progress, stats, and settings using local storage
+- Authentication flow (login, signup, forgot password)
+- Level selection grid with lock/completion states
+- Settings for sound/music/vibration/language and reset progress
+- Profile and leaderboard experiences
+- Info screens: privacy policy, terms, FAQ, contact support
 
-   ```bash
-   npm install
-   ```
+## Theme
 
-2. Start the app
+- Primary: `#6C5CE7`
+- Secondary: `#00D2FF`
+- Accent: `#FF3CAC`
+- Success: `#00FFAB`
+- Danger: `#FF4D4D`
+- Background gradient: `#0F2027 → #203A43 → #2C5364`
 
-   ```bash
-   npx expo start
-   ```
+## Tech Stack
 
-In the output, you'll find options to open the app in a
+- Expo SDK 54
+- React Native 0.81
+- Expo Router
+- AsyncStorage for persistent app state
+- Context-based game/settings state management
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- `app/` routes and screens
+- `context/GameContext.tsx` game progress, auth, and level logic
+- `context/SettingsContext.tsx` app settings persistence
+- `constants/colors.ts` shared neon color system and gradients
 
-## Get a fresh project
+## Run Locally
 
-When you're ready, run:
+### Prerequisites
+
+- Node.js 20+ recommended
+- npm
+
+### Install
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Start
 
-## Learn more
+```bash
+npm run start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### Lint
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm run lint
+```
 
-## Join the community
+### Type Check
 
-Join our community of developers creating universal apps.
+```bash
+npx tsc --noEmit
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Main User Flow
+
+1. Splash screen loads and routes user by auth state.
+2. User logs in/signs up.
+3. Home shows progress and actions (Start, Resume, Level Select).
+4. Game screen runs active level mechanics.
+5. Win unlocks next level; Lose offers retry.
+6. Settings/Profile/Leaderboard and info pages are available from navigation.
+
+## Notes
+
+- Current auth and backend interactions are mocked for app-flow completeness.
+- Progress is persisted locally and restored on app launch.

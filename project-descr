@@ -1,0 +1,266 @@
+# 📱 DropSphere – Complete Mobile Game Documentation
+
+---
+
+## 🧾 1. Introduction
+
+**App Name:** DropSphere
+**Type:** Casual Physics-Based Mobile Game
+
+DropSphere is a mobile game where a player controls a ball that moves down through stair-like levels. The goal is to safely guide the ball to the bottom. If the ball falls incorrectly, the player loses. If it reaches the end successfully, the player wins and unlocks the next level.
+
+The game includes multiple screens such as authentication, home, gameplay, level selection, and settings, making it a complete mobile application.
+
+---
+
+## 🎮 2. Game Concept
+
+The game is based on a simple but engaging concept:
+
+* A ball starts at the top of a staircase-like structure
+* The player controls its movement
+* The ball must safely descend step by step
+* If the ball falls off → Game Over
+* If it reaches the bottom → Level Complete
+
+The difficulty increases as levels progress.
+
+---
+
+## 🧱 3. Level System
+
+The game contains **50 levels**, divided into difficulty stages:
+
+* **Level 1–10:** Easy (slow movement, simple stairs)
+* **Level 11–20:** Medium (moving steps introduced)
+* **Level 21–30:** Hard (gaps and traps)
+* **Level 31–40:** Very Hard (faster speed)
+* **Level 41–50:** Extreme (complex patterns and timing)
+
+Each level unlocks after completing the previous one.
+
+---
+
+## 🧠 4. Core Features
+
+* Physics-based ball movement
+* Smooth controls (tap / swipe)
+* Progressive difficulty
+* Auto-save progress
+* Resume gameplay from last level
+* Option to replay previous levels
+* Level unlocking system
+
+---
+
+## 📱 5. App Screens
+
+### 5.1 Splash Screen
+
+* Displays app logo (animated ball)
+* Smooth loading animation
+
+---
+
+### 5.2 Authentication Screens
+
+#### Login Screen
+
+* Email and password input
+* Login button
+
+#### Sign Up Screen
+
+* Name
+* Email
+* Password
+* Confirm password
+
+#### Forgot Password
+
+* Email input
+* Password reset option
+
+---
+
+### 5.3 Home Screen
+
+Main dashboard of the app:
+
+* Start Game button
+* Resume Game option
+* Current Level display
+* Progress indicator (e.g., 12/50)
+* Settings button
+
+---
+
+### 5.4 Level Selection Screen
+
+* Displays all levels (1–50)
+* Locked and unlocked levels
+* Completed levels marked
+* Current level highlighted
+
+---
+
+### 5.5 Game Screen
+
+Main gameplay area:
+
+* Ball (player object)
+* Stairs/platforms
+* Obstacles (in higher levels)
+* Pause button
+* Level indicator
+
+---
+
+### 5.6 Win Screen
+
+Displayed when player completes a level:
+
+* “Level Complete” message
+* Next Level button
+* Replay option
+* Celebration animation (confetti, glow effects)
+
+---
+
+### 5.7 Lose Screen
+
+Displayed when player fails:
+
+* “Game Over” message
+* Retry button
+* Back to Home option
+* Fall animation with slight screen shake
+
+---
+
+### 5.8 Settings Screen
+
+Contains app controls and information:
+
+* Sound On/Off
+* Music On/Off
+* Vibration toggle
+* Language selection
+* Reset Progress
+* Logout
+
+---
+
+### 5.9 Additional Screens
+
+* Privacy Policy
+* Terms & Conditions
+* FAQs
+* Contact Support
+
+---
+
+## 🎨 6. UI/UX Design & Color Theme
+
+### Color Palette:
+
+* **Primary:** #6C5CE7 (Purple)
+* **Secondary:** #00D2FF (Blue)
+* **Accent:** #FF3CAC (Pink)
+* **Background:** Dark gradient (#0F2027 → #203A43 → #2C5364)
+* **Success:** #00FFAB (Green)
+* **Danger:** #FF4D4D (Red)
+
+### Design Style:
+
+* Modern and minimal
+* Neon glow effects
+* Smooth gradients
+* Soft shadows
+* Clean layout
+
+---
+
+## 🎬 7. Animations & Effects
+
+* Ball movement with realistic physics
+* Smooth falling animation
+* Win animation (confetti + glow)
+* Lose animation (slow motion + shake)
+* Button press animations
+
+---
+
+## 🔊 8. Sound System
+
+* Background music
+* Ball bounce sound
+* Win sound effect
+* Lose sound effect
+
+---
+
+## 💾 9. Data & Progress System
+
+* Automatically saves player progress
+
+* Stores:
+
+  * Current level
+  * Completed levels
+  * Settings
+
+* Player can:
+
+  * Resume from last level
+  * Replay any unlocked level
+
+---
+
+## ⚙️ 10. Technical Suggestions
+
+### Frontend:
+
+* React Native (Expo) OR Flutter
+
+### Game Logic:
+
+* React Native Game Engine OR Unity
+
+### Backend:
+
+* Firebase (Authentication + Database)
+
+---
+
+## 🤖 11. AI Prompt (For App Builder)
+
+Use the following prompt:
+
+Create a mobile game application called "DropSphere". The app includes splash screen, login, signup, and forgot password screens. After login, show a home screen with start game and resume options. The game should have 50 levels where a ball moves down stairs. If the ball falls incorrectly, the player loses. If it reaches the bottom, the player wins.
+
+Include smooth animations, neon color theme, level progression system, and auto-save progress. Add level selection, win/lose screens, and a settings screen with sound, logout, FAQ, and privacy policy.
+
+Ensure clean UI, good performance, and responsive design.
+
+---
+
+## 🚀 12. Future Improvements
+
+* Multiplayer mode
+* Leaderboards
+* Daily challenges
+* Unlockable ball skins
+* Reward system
+
+---
+
+## ✅ Conclusion
+
+DropSphere is a complete mobile game application with:
+
+* Engaging gameplay
+* 50 progressive levels
+* Modern UI design
+* Smooth animations
+* Full app structure (auth + settings + gameplay)
